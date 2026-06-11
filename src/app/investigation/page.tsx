@@ -104,7 +104,7 @@ import { useState } from "react";
 
         <input
           type="text"
-          placeholder="Enter customer name (e.g. John Doe)"
+          placeholder="Search by name, email or phone"
           value={customer}
           onChange={(e) => setCustomer(e.target.value)}
           className="w-full p-3 rounded-lg bg-white text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"

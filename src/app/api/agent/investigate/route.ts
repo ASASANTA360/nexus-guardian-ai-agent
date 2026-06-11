@@ -18,8 +18,27 @@ export async function POST(req: Request) {
 
     // Step 1: Find Customer
     const user = await User.findOne({
-      fullName: customer,
-    });
+  $or: [
+    {
+      fullName: {
+        $regex: customer,
+        $options: "i",
+      },
+    },
+    {
+      email: {
+        $regex: customer,
+        $options: "i",
+      },
+    },
+    {
+      phone: {
+        $regex: customer,
+        $options: "i",
+      },
+    },
+  ],
+});
 
     if (!user) {
       return NextResponse.json(
