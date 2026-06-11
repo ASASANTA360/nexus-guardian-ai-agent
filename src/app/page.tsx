@@ -1,107 +1,145 @@
 import Link from "next/link";
 
+import WalletStatus from "../components/WalletStatus";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8">
+    <main className="min-h-screen bg-black text-white">
 
-      <h1 className="text-6xl font-black mb-6 text-center">
-        Nexus Guardian
-      </h1>
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-lg border-b border-cyan-500/20">
+        <div className="flex justify-between items-center px-8 py-4">
 
-      <p className="text-2xl text-center max-w-4xl mb-10">
-        AI-powered Trust Agent for Autonomous KYC Verification,
-        Fraud Detection, and Risk Investigation.
-      </p>
+          <div className="flex items-center gap-3">
+            <div className="text-3xl">🛡️</div>
 
-      <div className="space-y-4 text-xl mb-12">
-
-        <p>🧠 Gemini AI Agent</p>
-
-        <p>🔐 Digital Trust & Fraud Prevention</p>
-
-        <p>🗄️ MongoDB Intelligence Layer</p>
-
-        <p>⚡ Human-in-the-loop Decision Making</p>
-
-      </div>
-
-      {/* Navigation Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-6xl">
-
-     <Link
-      href="/register"
-      className="bg-cyan-600 hover:bg-cyan-500 p-6 rounded-2xl text-center transition"
->
-     <div className="text-5xl mb-3">
-      📝
-    </div>
-
-    <h2 className="text-2xl font-bold">
-      Register Customer
-    </h2>
-
-     <p className="mt-2 text-gray-200">
-      Add new customer to the trust network
-    </p>
-     </Link>
-        <Link
-          href="/investigation"
-          className="bg-blue-600 hover:bg-blue-500 p-6 rounded-2xl text-center transition"
-        >
-          <div className="text-5xl mb-3">
-            🧠
+            <h1 className="text-2xl font-bold">
+              Nexus Guardian
+              <span className="text-cyan-400"> AI</span>
+            </h1>
           </div>
 
-          <h2 className="text-2xl font-bold">
-            AI Investigation
-          </h2>
 
-          <p className="mt-2 text-gray-200">
-            Launch Gemini fraud investigation
-          </p>
-        </Link>
-
-
-        <Link
-          href="/dashboard"
-          className="bg-purple-600 hover:bg-purple-500 p-6 rounded-2xl text-center transition"
-        >
-          <div className="text-5xl mb-3">
-            📊
+          <div className="hidden md:flex gap-8 text-gray-300">
+            <Link href="/">🏠 Home</Link>
+            <Link href="/register">👥 Customers</Link>
+            <Link href="/investigation">🔎 Investigation</Link>
+            <Link href="/dashboard">📊 Dashboard</Link>
+            <Link href="/history">📜 Audit</Link>
           </div>
 
-          <h2 className="text-2xl font-bold">
-            Executive Dashboard
-          </h2>
 
-          <p className="mt-2 text-gray-200">
-            View AI security analytics
-          </p>
-        </Link>
+          <WalletStatus />
+
+        </div>
+      </nav>
 
 
-        <Link
-          href="/history"
-          className="bg-green-600 hover:bg-green-500 p-6 rounded-2xl text-center transition"
-        >
-          <div className="text-5xl mb-3">
-            📜
-          </div>
+      {/* Content */}
+      <div className="p-4 flex flex-col items-center">
 
-          <h2 className="text-2xl font-bold">
-            Audit History
-          </h2>
+        <h1 className="text-5xl font-black mb-3 text-center">
+          Nexus Guardian
+        </h1>
 
-          <p className="mt-2 text-gray-200">
-            Review previous AI decisions
-          </p>
-        </Link>
-
-      </div>
+        <p className="text-lg text-center max-w-3xl mb-5 text-gray-300">
+          AI-powered Trust Agent for Autonomous KYC Verification,
+          Fraud Detection, and Risk Investigation.
+        </p>
 
 
-      <div className="mt-12 text-gray-500 text-center">
-        Powered by Gemini 2.5 Flash • MongoDB Atlas • Next.js
+        {/* Features */}
+        <div className="space-y-2 text-base text-center mb-6">
+
+          <p>🧠 Gemini AI Agent</p>
+          <p>🔐 Digital Trust & Fraud Prevention</p>
+          <p>🗄️ MongoDB Intelligence Layer</p>
+          <p>⚡ Human-in-the-loop Decision Making</p>
+
+        </div>
+
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-6xl">
+
+
+          <Link
+            href="/register"
+            className="bg-cyan-600 hover:bg-cyan-500 p-4 rounded-xl text-center">
+
+            <div className="text-4xl mb-2">📝</div>
+
+            <h2 className="font-bold">
+              Register Customer
+            </h2>
+
+            <p className="text-sm mt-2">
+              Add new customer to trust network
+            </p>
+
+          </Link>
+
+
+          <Link
+            href="/investigation"
+            className="bg-blue-600 hover:bg-blue-500 p-4 rounded-xl text-center">
+
+            <div className="text-4xl mb-2">🧠</div>
+
+            <h2 className="font-bold">
+              AI Investigation
+            </h2>
+
+            <p className="text-sm mt-2">
+              Launch Gemini fraud analysis
+            </p>
+
+          </Link>
+
+
+          <Link
+            href="/dashboard"
+            className="bg-purple-600 hover:bg-purple-500 p-4 rounded-xl text-center">
+
+            <div className="text-4xl mb-2">📊</div>
+
+            <h2 className="font-bold">
+              Dashboard
+            </h2>
+
+            <p className="text-sm mt-2">
+              View security analytics
+            </p>
+
+          </Link>
+
+
+          <Link
+            href="/history"
+            className="bg-green-600 hover:bg-green-500 p-4 rounded-xl text-center">
+
+            <div className="text-4xl mb-2">📜</div>
+
+            <h2 className="font-bold">
+              Audit History
+            </h2>
+
+            <p className="text-sm mt-2">
+              Review AI decisions
+            </p>
+
+          </Link>
+
+        </div>
+
+
+        {/* Footer */}
+        <div className="mt-8 text-gray-500 text-sm text-center">
+
+          Powered by Gemini 2.5 Flash • MongoDB Atlas • Mantle Network
+
+        </div>
+
       </div>
 
     </main>
