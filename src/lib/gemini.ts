@@ -4,11 +4,16 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY!,
 });
 
+
+/**
+ * Nexus Guardian KYC Investigation AI
+ */
 export async function analyzeRisk(data: {
   customer: any;
   kycRecords: any[];
   fraudCases: any[];
 }) {
+
   const prompt = `
 You are Nexus Guardian AI, an expert fraud detection and KYC investigation agent.
 
@@ -35,17 +40,82 @@ Provide your response in this JSON format:
 Only return valid JSON.
 `;
 
- const response = await ai.models.generateContent({
-  model: "gemini-2.5-flash",
-  contents: prompt,
-});
 
-const text = response.text ?? "";
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: prompt,
+  });
 
-const cleaned = text
-  .replace(/```json/g, "")
-  .replace(/```/g, "")
-  .trim();
 
-return cleaned;
+  const text = response.text ?? "";
+
+
+  const cleaned = text
+    .replace(/```json/g, "")
+    .replace(/```/g, "")
+    .trim();
+
+
+  return cleaned;
+}
+
+
+
+/**
+ * Nexus Guardian Web3 Wallet Security AI
+ */
+export async function generateWalletRiskExplanation(data: {
+  wallet: string;
+  trustScore: number;
+  riskLevel: string;
+  transactions: number;
+  lastActivityDays: number;
+  network: string;
+}) {
+
+  const prompt = `
+You are Nexus Guardian AI, an advanced blockchain security investigator.
+
+Analyze this wallet information and create a professional security report.
+
+Wallet Address:
+${data.wallet}
+
+Blockchain Network:
+${data.network}
+
+Trust Score:
+${data.trustScore}/100
+
+Risk Level:
+${data.riskLevel}
+
+Total Transactions:
+${data.transactions}
+
+Last Activity:
+${data.lastActivityDays} days ago
+
+
+Your report must include:
+
+1. Trust assessment
+2. Positive security indicators
+3. Possible risk indicators
+4. Recommended action
+
+Write a concise professional report under 120 words.
+`;
+
+
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: prompt,
+  });
+
+
+  return (
+    response.text ??
+    "Nexus Guardian AI could not generate a wallet security report."
+  );
 }

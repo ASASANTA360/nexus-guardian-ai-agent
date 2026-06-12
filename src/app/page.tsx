@@ -60,8 +60,7 @@ export default function Home() {
 
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-6xl">
-
+       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-6xl">
 
           <Link
             href="/register"
@@ -128,10 +127,43 @@ export default function Home() {
               Review AI decisions
             </p>
 
-          </Link>
+             </Link>
+
+              <Link
+                 href="/security"
+                    className="bg-red-600 hover:bg-red-500 p-4 rounded-xl text-center"
+>
+            <div className="text-4xl mb-2">
+                    🛡️
+             </div>
+
+            <h2 className="font-bold">
+                 Security Center
+           </h2>
+
+             <p className="text-sm mt-2">
+    Web3 AI Risk Analytics
+             </p>
+
+         </Link>
+         
+         <Link
+               href="/wallet-history"
+                      className="bg-orange-600 hover:bg-orange-500 p-4 rounded-xl text-center"
+>
+
+          <div className="text-4xl mb-2">
+                      👛
+         </div>
+                <h2 className="font-bold">
+                    Wallet Intelligence
+                </h2>
+              <p className="text-sm mt-2">
+                    Blockchain audit history
+               </p>
+         </Link>
 
         </div>
-
 
         {/* Footer */}
         <div className="mt-8 text-gray-500 text-sm text-center">
