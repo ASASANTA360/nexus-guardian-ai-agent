@@ -3,6 +3,10 @@
 <p align="center">
   <img src="./docs/cover.png" width="100%" alt="Nexus Guardian AI Cover">
 </p>
+## 🧠 AI Investigation Architecture
+<p align="center">
+  <img src="./docs/architecture.png" width="100%" alt="Nexus Guardian AI Architecture">
+</p>
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
