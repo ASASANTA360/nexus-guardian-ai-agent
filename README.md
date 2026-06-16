@@ -1,5 +1,8 @@
  # 🛡️ Nexus Guardian AI
 <p align="center">
+<p align="center">
+  <img src="./docs/cover.png" width="100%" alt="Nexus Guardian AI Cover">
+</p>
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
