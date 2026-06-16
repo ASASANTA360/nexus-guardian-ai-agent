@@ -18,6 +18,23 @@
 
 </p>
 
+## 📸 Product Screenshots
+
+### 🏠 Dashboard
+![Dashboard](./docs/dashboard.png)
+
+### 🪪 AI KYC Investigation
+![KYC Investigation](./docs/kyc-investigation.png)
+
+### 👛 Wallet Intelligence
+![Wallet Intelligence](./docs/wallet-intelligence.png)
+
+### 🛡 Security Center
+![Security Center](./docs/security-center.png)
+
+### 🤖 AI Investigation Report
+![AI Report](./docs/ai-investigation-report.png)
+
 ## ⛓️ Web3 & Mantle Blockchain Integration
 
 Nexus Guardian AI extends AI-powered fraud intelligence with a transparent on-chain audit layer built on Mantle Sepolia.
