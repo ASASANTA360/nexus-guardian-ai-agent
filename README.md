@@ -1,3 +1,16 @@
+ # 🛡️ Nexus Guardian AI
+<p align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![AI](https://img.shields.io/badge/AI-Gemini_AI-orange)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
+![Blockchain](https://img.shields.io/badge/Blockchain-Mantle_L2-purple)
+![Smart Contract](https://img.shields.io/badge/Smart_Contract-Solidity-blue)
+![Status](https://img.shields.io/badge/Status-Production_MVP-success)
+
+</p>
+
 ## ⛓️ Web3 & Mantle Blockchain Integration
 
 Nexus Guardian AI extends AI-powered fraud intelligence with a transparent on-chain audit layer built on Mantle Sepolia.
